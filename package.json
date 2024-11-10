@@ -1,0 +1,32 @@
+{
+  "name": "prototype",
+  "version": "1.0.0",
+  "scripts": {
+    "format": "npx prettier --write  \"{src,test}/**/*.mjs\"",
+    "start": "node src/index.mjs",
+    "start:dev": "node src/index.mjs --watch",
+    "lint": "npx eslint \"{src,test}/**/*.mjs\" --fix",
+    "types": "npx tsc -p ./jsconfig.json",
+    "migrate": "npx knex migrate:latest",
+    "drop": "npx knex migrate:rollback",
+    "seed": "npx knex seed:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.42.0",
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "googleapis": "^105.0.0",
+    "knex": "^3.1.0",
+    "node-cron": "^3.0.3",
+    "pg": "^8.11.5",
+    "pino": "^8.20.0",
+    "pino-pretty": "^11.0.0",
+    "typescript": "^5.4.2"
+  }
+}
